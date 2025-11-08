@@ -1,0 +1,26 @@
+@media only screen and (min-width: 38rem) {
+    header, main, nav, footer {
+        max-width: 900px;
+        /* to center the title bar */
+        margin: 0 auto;
+    }
+        /* 38 rem is about 608 pixels (38 x 16 fontsize) */
+    
+.hamburger {
+    display: none;
+}
+.navigation {
+    display: block;
+    border-bottom: solid 1px #eee;
+}
+
+.navigation ul {
+    display: flex;
+}
+
+.navigation a {
+    border: none;
+}
+
+
+}
