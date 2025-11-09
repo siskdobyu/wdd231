@@ -1,8 +1,14 @@
-@media only screen and (min-width: 600px) {
-    header, main, nav, footer {
+@media only screen and (min-width: 320px) and (max-width: 1200px) {
+    html, body {
+    overflow-x: hidden;
+        /* ✅ Hides horizontal scroll */
+        width: 100%;
+        /* Ensures elements don’t stretch past the viewport */
+    }
+    /* header, main, nav, footer {
         max-width: 900px;
-        /* to center the title bar */
-        margin: 0 auto;
+        to center the title bar */
+        /* margin: 0 auto; */
     }
         /* 38 rem is about 608 pixels (38 x 16 fontsize) */
     
