@@ -29,4 +29,24 @@
 }
 
 
+.mainpage {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    align-content: center;
 }
+
+/* section {
+    background: white;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+
+section h2 {
+    background-color: #444;
+    color: white;
+    padding: 8px;
+    margin-top: 0;
+} */

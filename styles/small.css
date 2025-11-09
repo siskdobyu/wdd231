@@ -1,9 +1,9 @@
-/* color scheme terra cotta #E07A5F
-deep slate blue #3D405B
+/* color scheme 70A288
+031D44
 */
 
 *{
-    font-family: "Josefin Sans", sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     box-sizing: border-box;
 }
 
@@ -28,7 +28,7 @@ header img {
 
 header span {
     font-size: 1.2rem;
-    color: #3D405B;
+    color: #031D44;
 
 }
 
@@ -37,7 +37,7 @@ header span {
     background: none;
     border: none;
     font-size: 2rem;
-    color: #3D405B;
+    color: #031D44;
     cursor: pointer;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -76,7 +76,7 @@ header span {
 .navigation a {
     display: block;
     padding: .8rem 10px ;
-    color: #3D405B;
+    color: #031D44;
     text-decoration: none;
     border-bottom: solid 1px #ddd;
 }
@@ -86,7 +86,7 @@ header span {
 }
 
 .navigation a:hover {
-    background-color: #E07A5F;
+    background-color: #D5896F;
 }
 
 h1, section {
