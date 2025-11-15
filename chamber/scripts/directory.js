@@ -25,7 +25,7 @@ function displayMembers(members) {
             <h3>${member.name}</h3>
             <p>${member.address}</p>
             <p>${member.phone}</p>
-            <a href="${member.website}" target="_blank">Visit Website</a>
+            <a href="${member.website}" target="_blank">${member.website}</a>
         `;
 
         directory.appendChild(card);
@@ -49,3 +49,5 @@ document.querySelector("#listBtn").addEventListener("click", () => {
 document.getElementById("menuBtn").addEventListener("click", () => {
     document.getElementById("navMenu").classList.toggle("hidden");
 });
+
+
