@@ -1,7 +1,13 @@
-/* color scheme 70A288
-031D44
-*/
+@media only screen and (max-width: 599px) {
+    /* Use max-width to ensure this rule overrides any min-width rule 
+       that may be activating too early (e.g., at 320px). */
 
+    .mainpage {
+        display: block !important;
+        /* Use !important only as a last resort check */
+        padding: 0 10px;
+        /* Ensure mobile padding is consistent*/
+    }
 *{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     box-sizing: border-box;
@@ -32,6 +38,10 @@ header span {
 
 }
 
+main h2 {
+    text-align: center;
+}
+
 /*Hamburger Navigation*/
 .hamburger {
     background: none;
@@ -40,6 +50,7 @@ header span {
     color: #031D44;
     cursor: pointer;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1;
 }
 
 .hamburger::before {
@@ -49,15 +60,6 @@ header span {
 .hamburger.show::before {
     content: "\00D7";
 }
-
-.navigation {
-    display: none;
-}
-
-.navigation.show {
-    display: block;
-}
-
 
 /*Navigation*/
 .navigation {
@@ -86,11 +88,15 @@ header span {
 }
 
 .navigation a:hover {
-    background-color: #D5896F;
+    background-color: #51368b;
 }
 
-h1, section {
+/* h1, section {
     margin-left: 10px;
+} */
+
+main {
+    padding: 0 10px;
 }
 
 /* footer */
@@ -128,3 +134,27 @@ footer {
 
 }
 
+.mainpage {
+    display: block;
+    padding: 0 1rem;
+}
+
+.about,
+.photo {
+    display: block !important;
+    grid-column: auto !important;
+    /* Clear any lingering grid column assignments */
+    
+    width: 100% !important;
+    margin-bottom: 20px;
+}
+
+.photo img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    height: auto;
+}
+
+}

@@ -1,44 +1,101 @@
-@media only screen and (min-width: 320px) and (max-width: 1200px) {
+@media only screen and (min-width: 600px){
     html, body {
     overflow-x: hidden;
         /* ✅ Hides horizontal scroll */
         width: 100%;
         /* Ensures elements don’t stretch past the viewport */
     }
-    /* header, main, nav, footer {
-        max-width: 900px;
-        to center the title bar */
-        /* margin: 0 auto; */
-    }
-        /* 38 rem is about 608 pixels (38 x 16 fontsize) */
+   
     
+        /* 38 rem is about 608 pixels (38 x 16 fontsize) */
+header img{
+    max-width: 40px;
+    height: auto;
+    display: block;
+}
+         
+
 .hamburger {
     display: none;
 }
-.navigation {
-    display: block;
-    border-bottom: solid 1px #eee;
-}
 
-.navigation ul {
-    display: flex;
-}
 
 .navigation a {
+    /* Set link colors to white to match the dark bar */
+    color: white;
     border: none;
+    padding: 10px 15px;
+        /* Adjust link spacing */
+    background-color: transparent;
 }
 
+/*to adjust the courses section*/
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+main h1 {
+    margin-top: 0.6rem;
+    margin-bottom: 1.5rem;
+}
+
+main h2 {
+    text-align: center;
+}
 
 .mainpage {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1.5fr;
     gap: 20px;
+    padding: 0 10px;
+    /* border: 1px solid #ccc; */
+    align-content: center;
+    align-items: stretch; /*for courses section*/
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    margin-bottom: 30px;
+ }
+
+ .about {
+    grid-column: 1 / 2;
+    background-color: white;
+    padding: 20px;
+     /* Internal padding for About Me content */
+    border: 1px solid #ccc;
+    margin-bottom: 0;
+ }
+
+ .photo {
+    grid-column: 2 / 3;
     padding: 20px;
     border: 1px solid #ccc;
-    align-content: center;
+    margin-bottom: 0;
+ }
+
+.courses {
+    grid-column: 1 / span 2;
+    width: 100%;
+    padding: 20px 0;
+    margin: 20px 0;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+        /* Ensure the outer box is there if needed */
 }
 
-/* section {
+
+#courses-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 0;
+    
+}
+
+section {
     background: white;
     padding: 15px;
     border: 1px solid #ccc;
@@ -49,4 +106,145 @@ section h2 {
     color: white;
     padding: 8px;
     margin-top: 0;
-} */
+}
+
+/* Styling for the main filter buttons */
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+    padding: 0 20px;
+}
+
+.buttons button{
+    flex-grow: 1;
+    min-width: 0;
+    background-color: #5b526f;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.course-filter-btn {
+    background-color: #5b526f;
+    /* Orange/Red color */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s;
+}
+
+.course-filter-btn:hover {
+    background-color: #51368b;
+}
+
+/* Styling for the course summary text */
+.course-summary {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #4a4a4a;
+    margin-bottom: 1.5rem;
+    padding: 0 20px;
+}
+
+.photo img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height:auto;
+    border-radius: 8px;
+}
+
+/* CSS Grid layout for the course list (two columns) */
+#courses-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Styling for the individual course buttons (the main blocks) */
+#courses-list button {
+    background-color: #505398;
+    /* Orange/Red color */
+    color: white;
+    border: none;
+    padding: 20px 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    /* Use flex to position the checkmark */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+    /* Not clickable for courses */
+}
+
+/* 1. Style for UNCOMPLETED courses (same as default, or slightly lighter) */
+.uncompleted-course {
+    background-color: #486289;
+    /* Your default color */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* 2. Style for COMPLETED courses (different, complimentary style) */
+.completed-course {
+    /* Example: Lighter background and darker text */
+    background-color: #8491c5;
+    /* A light, clean color */
+    color: #444;
+    /* Darker text */
+    border: 3px solid #4caf50;
+    /* Green border to indicate success/completion */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Checkmark styling (to avoid disrupting layout) */
+.checkmark {
+    margin-right: 5px;
+/
+}
+.navigation {
+    /* REMOVE THE DARK BACKGROUND: */
+    background-color: transparent;
+    padding: 0;
+    /* Ensure it spans the full width of the main content area */
+    max-width: 960px;
+    margin: 0 auto;
+
+    /* ADD the dark bar background color to a NEW element/class */
+    background-color: #333;
+    /* Dark gray for the navigation bar background */
+
+    /* Ensure the list fills the bar */
+    display: block;
+}
+
+.navigation ul {
+    display: flex;
+    justify-content: flex-start;
+    width: auto;
+    /* Add padding to the UL to space the links from the left edge */
+    padding-left: 10px;
+    list-style-type: none;
+
+
+}
+
+header, footer {
+    display: block;
+    align-items: center;
+}
+
+}

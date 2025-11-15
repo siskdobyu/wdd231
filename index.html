@@ -10,16 +10,16 @@
     <!-- Google Font -->
      <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <!--Style sheets-->
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
 
-    <script rel="scripts/navigation" defer></script>
-    <script rel="scripts/course" defer></script>
-    <script rel="scripts/date" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+    <script src="scripts/date.js" defer></script>
 </head>
 <body>
     <header>
@@ -30,7 +30,7 @@
     <nav id="nav-bar" class="navigation">
         <!-- nav tag ID enables connection to JS. class is to CSS -->
         <ul>
-            <li class="current"><a href="#">Home</a></li>
+            <li class="current"><a href="index.html">Home</a></li>
             <li  ><a href="#">Chamber Project</a></li>
             <li><a href="#">Final Project</a></li>
         </ul>
@@ -40,26 +40,27 @@
         <div class="mainpage">
         <section class="about">
             <h2>About Me</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis nulla dignissimos sapiente sint perferendis? Nihil sunt expedita aliquam voluptates. Sed, eaque? Consectetur dolorem provident itaque iste, maiores nesciunt eum cum?</p>       
+            <p>I am Karina Dolojan. I am from the Philippines. My country is located in Southeast Asia. It is composed of approximately 7600 islands. Can you believe that?!</p>
+            <p> I am currently working on earning my bachelor's degree in professional studies through BYU Pathway. I am hoping to complete my very first certificate in Web and Computer Programming.</p>
+            <p>I have worked in technical support and software license managment. Aside from my interest in information technology, I love to cook and bake. I like walking and enjoying the beauty of nature. I am also fond of dancing and singing.</p>       
         </section>
         <section class="photo">
             <h2>Student Photo</h2>
             <img src="images/profilepic-removebg-preview.png" alt="student photo">
         </section>
         <section class="courses">
-            <h2>Web Certificate Courses</h2>
+            <h2>Web and Computer Programming Certificate</h2>
             <div class="buttons">
-                <button>All</button>
-                <button>CSE</button>
-                <button>WDD</button>
+                <button id="all-courses" class="course-filter-btn">All Courses</button>
+                <button id="wdd-courses" class="course-filter-btn">WDD Courses</button>
+                <button id="cse-courses" class="course-filter-btn">CSE Courses</button>
             </div>
-            <div class="course-list">
-                <p>WDD 130</p>
-                <p>WDD 131</p>
-                <p>WDD 231</p>
-            </div>
-            <p class="credits">The total credits for courses listed above is 6</p>
+            <p class="course-summary">The total number of course listed below is <span id="course-count"></span></p>
+        
+            <section id="courses-list">
+            </section>
         </section>
+           
         </div>
 
         
@@ -70,8 +71,8 @@
             <a href="https://www.linkedin.com/in/karina-dolojan/"><img src="images/linkedin.svg" alt="linkedin" width="16" height="16" target="blank"></a>
             <a href="#"><img src="images/facebook.svg" alt="facebook" width="16" height="16" target="blank"></a>
         </div>
-        <p>&copy;<span id="year"></span> Karina Dolojan | Philippines</p>
-        <p>Last Modification<span id="lastmodified"></span></p>
+        <p>&copy;<span id="currentyear"></span> Karina Dolojan | Philippines</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
     </footer>    
 </body>
 </html>
