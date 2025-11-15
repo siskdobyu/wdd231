@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Makati City Chamber of Commerce Directory</title>
+    <meta name="description"
+        content="Business directory for the Makati City Chamber of Commerce.">
+    <meta name="author" content="Karina Dolojan">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Facebook / Open Graph -->
+    <meta property="og:title" content="Makati City Chamber of Commerce">
+    <meta property="og:description" content="Discover local businesses in our official chamber directory.">
+    <meta property="og:image" content="images/social-share.jpg">
+    <meta property="og:url" content="https://siskdobyu.github.io/wdd231/chamber/directory.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Makati City Chamber of Commerce Directory</h1>
+
+        <nav>
+            <button id="menuBtn">☰</button>
+            <ul id="navMenu" class="hidden">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="view-buttons">
+            <button id="gridBtn">Grid View</button>
+            <button id="listBtn">List View</button>
+        </div>
+
+        <section id="directory" class="grid"></section>
+
+    </main>
+
+    <footer>
+        <div class="social">
+            <a href="https://siskdobyu.github.io/wdd231"><img src="images/github.svg" alt="github" width="16" height="16"
+                    target="blank"></a>
+            <a href="https://www.linkedin.com/in/karina-dolojan/"><img src="images/linkedin.svg" alt="linkedin" width="16"
+                    height="16" target="blank"></a>
+            <a href="#"><img src="images/facebook.svg" alt="facebook" width="16" height="16" target="blank"></a>
+        </div>
+        <p>&copy;<span id="currentyear"></span> Karina Dolojan | Philippines</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="scripts/directory.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Ayala Land Inc.",
+        "address": "Tower One, Ayala Triangle, Makati City",
+        "phone": "(02) 7908-3000",
+        "website": "https://www.ayalaland.com.ph",
+        "image": "ayalaland.png",
+        "membership": 3
+    },
+    {
+        "name": "Makati Medical Center",
+        "address": "No. 2 Amorsolo Street, Legazpi Village, Makati City",
+        "phone": "(02) 8888-8999",
+        "website": "https://www.makatimed.net.ph",
+        "image": "makatimed.jpg",
+        "membership": 2
+    },
+    {
+        "name": "Greenbelt Mall",
+        "address": "Esperanza Street, Ayala Center, Makati City",
+        "phone": "(02) 7795-9595",
+        "website": "https://www.ayalamalls.com/mall/greenbelt",
+        "image": "greenbelt.jpg",
+        "membership": 1
+    },
+    {
+        "name": "Glorietta Mall",
+        "address": "Palm Drive, Ayala Center, Makati City",
+        "phone": "(02) 7795-9595",
+        "website": "https://www.ayalamalls.com/mall/glorietta",
+        "image": "glorietta.jpg",
+        "membership": 2
+    },
+    {
+        "name": "The Peninsula Manila",
+        "address": "Corner of Ayala and Makati Avenue, Makati City",
+        "phone": "(02) 8887-2888",
+        "website": "https://www.peninsula.com/manila",
+        "image": "peninsula.jpg",
+        "membership": 3
+    },
+    {
+        "name": "SM Makati",
+        "address": "Ayala Avenue corner Courtyard Drive, Makati City",
+        "phone": "(02) 8811-0000",
+        "website": "https://www.smsupermalls.com/mall-locator/sm-makati",
+        "image": "sm-makati.jpg",
+        "membership": 1
+    },
+    {
+        "name": "Pobla Street Food Hub",
+        "address": "Poblacion, Makati City",
+        "phone": "0995-123-4567",
+        "website": "https://facebook.com/poblafoodhub",
+        "image": "pobla.jpg",
+        "membership": 2
+    }
+]
