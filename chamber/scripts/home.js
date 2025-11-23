@@ -15,11 +15,10 @@ menuBtn.addEventListener("click", () => {
 document.querySelector("#currentyear").textContent = new Date().getFullYear();
 document.querySelector("#lastModified").textContent = document.lastModified;
 
-
 // ---------------------
-// WEATHER API
+// WEATHER API SETTINGS
 // ---------------------
-const apiKey = "382d16a6c74cd5831ebb74fbcf9286cb";   // <--OpenWeatherMap API key
+const apiKey = "382d16a6c74cd5831ebb74fbcf9286cb";
 const city = "Makati";
 
 const currentWeatherURL =
@@ -28,14 +27,19 @@ const currentWeatherURL =
 const forecastURL =
     `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
 
-
-// Fetch current weather
+// ---------------------
+// CURRENT WEATHER WITH ICON
+// ---------------------
 async function getWeather() {
     try {
         const response = await fetch(currentWeatherURL);
         const data = await response.json();
 
+        const iconCode = data.weather[0].icon; // e.g. "03d"
+        const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+
         document.querySelector("#currentWeather").innerHTML = `
+            <img src="${iconUrl}" alt="${data.weather[0].description}">
             <p><strong>Temperature:</strong> ${data.main.temp.toFixed(1)}°C</p>
             <p><strong>Condition:</strong> ${data.weather[0].description}</p>
         `;
@@ -45,13 +49,15 @@ async function getWeather() {
 }
 
 
-// Fetch 3-day forecast
+// ---------------------
+// 3-DAY FORECAST WITH ICONS
+// ---------------------
 async function getForecast() {
     try {
         const response = await fetch(forecastURL);
         const data = await response.json();
 
-        // Forecast every 3 hrs → pick entries at 12:00:00
+        // Forecast every 3 hrs → pick 12:00:00 entries
         const filtered = data.list.filter(d => d.dt_txt.includes("12:00:00")).slice(0, 3);
 
         const container = document.querySelector("#forecast");
@@ -61,9 +67,13 @@ async function getForecast() {
             const date = new Date(day.dt_txt);
             const options = { weekday: "short", month: "short", day: "numeric" };
 
+            const iconCode = day.weather[0].icon;
+            const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+
             container.innerHTML += `
                 <div class="forecast-card">
                     <p><strong>${date.toLocaleDateString("en-US", options)}</strong></p>
+                    <img src="${iconUrl}" alt="${day.weather[0].description}">
                     <p>${day.main.temp.toFixed(1)}°C</p>
                     <p>${day.weather[0].description}</p>
                 </div>
@@ -77,7 +87,6 @@ async function getForecast() {
 
 getWeather();
 getForecast();
-
 
 // ---------------------
 // BUSINESS SPOTLIGHTS
