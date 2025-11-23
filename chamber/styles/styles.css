@@ -24,11 +24,11 @@ footer {
     cursor: pointer;
 }
 
-nav ul {
+/* nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-}
+} */
 
 nav ul.hidden {
     display: none;
@@ -131,7 +131,7 @@ nav li a {
     position: absolute;
     bottom: 20px;
     left: 30px;
-    color: white;
+    color: white; 
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
 }
 
@@ -229,7 +229,7 @@ nav li a {
     padding-left: 10px;
 }
 .spotlight-card {
-    background: #ffffff;
+    background: #f3f3f3; /*changed from whito light gray*/
     padding: 1.2rem;
     border-radius: 12px;
     width: 260px;
