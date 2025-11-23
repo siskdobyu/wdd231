@@ -48,7 +48,6 @@ async function getWeather() {
     }
 }
 
-
 // ---------------------
 // 3-DAY FORECAST WITH ICONS
 // ---------------------

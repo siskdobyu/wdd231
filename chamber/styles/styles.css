@@ -160,7 +160,6 @@ nav li a {
     background: #004a99;
 }
 
-
 /* --------------------
    EVENTS SECTION
 ----------------------- */
@@ -176,8 +175,6 @@ nav li a {
 .events li {
     padding: 6px 0;
 }
-
-
 
 /* --------------------
    WEATHER SECTION
@@ -268,7 +265,6 @@ nav li a {
 .spotlight-link:hover {
     background: #004999;
 }
-
 
 /* --------------------
    RESPONSIVE FIXES
