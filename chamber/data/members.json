@@ -5,7 +5,7 @@
         "phone": "(02) 7908-3000",
         "website": "https://www.ayalaland.com.ph",
         "image": "ayalaland.png",
-        "membership": 3
+        "membership": "Gold"
     },
     {
         "name": "Makati Medical Center",
@@ -13,7 +13,7 @@
         "phone": "(02) 8888-8999",
         "website": "https://www.makatimed.net.ph",
         "image": "makatimed.jpg",
-        "membership": 2
+        "membership": "Gold"
     },
     {
         "name": "Greenbelt Mall",
@@ -21,7 +21,7 @@
         "phone": "(02) 7795-9595",
         "website": "https://www.ayalamalls.com/main/malls/ayala-greenbelt",
         "image": "greenbelt.jpg",
-        "membership": 1
+        "membership": "Silver"
     },
     {
         "name": "Glorietta Mall",
@@ -29,7 +29,7 @@
         "phone": "(02) 7795-9595",
         "website": "https://www.ayalamalls.com/main/malls/ayala-glorietta",
         "image": "glorietta.jpg",
-        "membership": 2
+        "membership": "Silver"
     },
     {
         "name": "The Peninsula Manila",
@@ -37,7 +37,7 @@
         "phone": "(02) 8887-2888",
         "website": "https://www.peninsula.com/manila",
         "image": "peninsula.svg",
-        "membership": 3
+        "membership": "Bronze"
     },
     {
         "name": "SM Makati",
@@ -45,7 +45,7 @@
         "phone": "(02) 8811-0000",
         "website": "https://smstore.com/promos-events/makati/",
         "image": "sm-logo.png",
-        "membership": 1
+        "membership": "Gold"
     },
     {
         "name": "Blackbird",
@@ -53,6 +53,6 @@
         "phone": "0917 889 2782",
         "website": "https://www.blackbird.com.ph/",
         "image": "blackbird.png",
-        "membership": 2
+        "membership": "Bronze"
     }
 ]

@@ -82,41 +82,62 @@ getForecast();
 // ---------------------
 // BUSINESS SPOTLIGHTS
 // ---------------------
-async function getSpotlights() {
+const spotlightContainer = document.querySelector("#spotlights");
+const membersURL = "data/members.json"; 
+
+async function loadSpotlights() {
     try {
-        const response = await fetch("data/members.json");
+        const response = await fetch(membersURL);
+
+        if (!response.ok) {
+            throw new Error("Failed to fetch members.json");
+        }
+
         const data = await response.json();
 
-        // Gold + Silver only
-        const filtered = data.members.filter(m =>
-            m.membership === "Gold" || m.membership === "Silver"
+        // Filter only gold and silver members
+        const qualifiedMembers = data.members.filter(member =>
+            member.membership === "Gold" || member.membership === "Silver"
         );
 
-        // Randomize
-        const shuffled = filtered.sort(() => Math.random() - 0.5);
+        // Randomize order
+        shuffleArray(qualifiedMembers);
 
-        // Select 2 or 3
-        const selected = shuffled.slice(0, 3);
+        // Select 2 or 3 members randomly
+        const spotlightCount = Math.random() < 0.5 ? 2 : 3;
+        const selectedMembers = qualifiedMembers.slice(0, spotlightCount);
 
-        const container = document.querySelector("#spotlightContainer");
-        container.innerHTML = "";
+        // Clear any existing content
+        spotlightContainer.innerHTML = "";
 
-        selected.forEach(member => {
-            container.innerHTML += `
-                <div class="spotlight-card">
-                    <img src="${member.image}" alt="${member.name} logo">
-                    <h3>${member.name}</h3>
-                    <p>${member.address}</p>
-                    <p>${member.phone}</p>
-                    <a href="${member.website}" target="_blank">Visit Website</a>
-                    <p class="membership-level ${member.membership.toLowerCase()}">${member.membership} Member</p>
-                </div>
+        // Build spotlight cards
+        selectedMembers.forEach(member => {
+            const card = document.createElement("div");
+            card.classList.add("spotlight-card");
+
+            card.innerHTML = `
+                <img src="images/${member.image}" alt="${member.name} logo">
+                <h3>${member.name}</h3>
+                <p><strong>Membership:</strong> ${member.membership}</p>
+                <p><strong>Phone:</strong> ${member.phone}</p>
+                <p><strong>Address:</strong> ${member.address}</p>
+                <a href="${member.website}" target="_blank" class="spotlight-link">Visit Website</a>
             `;
+
+            spotlightContainer.appendChild(card);
         });
 
-    } catch (err) {
-        console.error("Error loading spotlights:", err);
+    } catch (error) {
+        console.error("Spotlights Error:", error);
     }
 }
 
-getSpotlights();
+// Utility: Fisher–Yates shuffle
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+loadSpotlights();
