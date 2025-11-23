@@ -83,7 +83,7 @@ getForecast();
 // BUSINESS SPOTLIGHTS
 // ---------------------
 const spotlightContainer = document.querySelector("#spotlights");
-const membersURL = "data/members.json"; 
+const membersURL = "data/members.json";
 
 async function loadSpotlights() {
     try {
@@ -93,24 +93,24 @@ async function loadSpotlights() {
             throw new Error("Failed to fetch members.json");
         }
 
-        const data = await response.json();
+        // JSON array, not an object
+        const members = await response.json();
 
-        // Filter only gold and silver members
-        const qualifiedMembers = data.members.filter(member =>
+        // Filter only Gold and Silver members
+        const qualifiedMembers = members.filter(member =>
             member.membership === "Gold" || member.membership === "Silver"
         );
 
-        // Randomize order
+        // Randomize
         shuffleArray(qualifiedMembers);
 
-        // Select 2 or 3 members randomly
+        // Select 2 or 3
         const spotlightCount = Math.random() < 0.5 ? 2 : 3;
         const selectedMembers = qualifiedMembers.slice(0, spotlightCount);
 
-        // Clear any existing content
+        // Clear before adding
         spotlightContainer.innerHTML = "";
 
-        // Build spotlight cards
         selectedMembers.forEach(member => {
             const card = document.createElement("div");
             card.classList.add("spotlight-card");
@@ -132,7 +132,7 @@ async function loadSpotlights() {
     }
 }
 
-// Utility: Fisher–Yates shuffle
+// Fisher–Yates shuffle helper
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -141,3 +141,4 @@ function shuffleArray(array) {
 }
 
 loadSpotlights();
+
