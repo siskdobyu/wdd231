@@ -19,7 +19,7 @@ document.querySelector("#lastModified").textContent = document.lastModified;
 // ---------------------
 // WEATHER API
 // ---------------------
-const apiKey = "YOUR_API_KEY";   // <--OpenWeatherMap API key
+const apiKey = "382d16a6c74cd5831ebb74fbcf9286cb";   // <--OpenWeatherMap API key
 const city = "Makati";
 
 const currentWeatherURL =
