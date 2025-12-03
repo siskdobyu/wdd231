@@ -18,73 +18,66 @@
 // document.getElementById("currentyear").textContent = new Date().getFullYear();
 // document.getElementById("lastModified").textContent = document.lastModified;
 
-// ---------- Timestamp Filler ----------
 window.addEventListener('DOMContentLoaded', () => {
     const timestampField = document.getElementById('timestamp');
     if (timestampField) {
-        const now = new Date().toISOString();
-        timestampField.value = now;
+        timestampField.value = new Date().toISOString();
     }
-
-
     initModals();
     populateThankYouPage();
 });
 
-
-// ---------- Modal Handling ----------
+// ---------- MODAL HANDLING (WORKING) ----------
 function initModals() {
-    const modalLinks = document.querySelectorAll('.card a[href^="#"]');
+    const modalLinks = document.querySelectorAll('.open-modal');
     const modals = document.querySelectorAll('.modal');
 
-
+    // OPEN MODAL
     modalLinks.forEach(link => {
         link.addEventListener('click', e => {
             e.preventDefault();
-            const target = link.getAttribute('href');
-            const modal = document.querySelector(target);
+            const modalId = link.getAttribute('data-target'); // ✅ now reads correct modal ID
+            const modal = document.getElementById(modalId);
             if (modal) openModal(modal);
         });
     });
 
-
+    // CLOSE MODAL
     modals.forEach(modal => {
-        const closeBtn = modal.querySelector('.modal-close');
+        const closeBtn = modal.querySelector('.close-modal');
         if (closeBtn) {
             closeBtn.addEventListener('click', () => closeModal(modal));
         }
 
-
+        // Close if clicking outside .modal-content
         modal.addEventListener('click', e => {
             if (e.target === modal) closeModal(modal);
         });
     });
 
-
-    // ESC key closes any open modal
+    // Close when ESC is pressed
     document.addEventListener('keydown', e => {
         if (e.key === 'Escape') {
-            document
-                .querySelectorAll('.modal[data-visible="true"]')
-                .forEach(modal => closeModal(modal));
+            modals.forEach(modal => {
+                if (modal.dataset.visible === "true") closeModal(modal);
+            });
         }
     });
 }
 
-
 function openModal(modal) {
-    modal.dataset.visible = 'true';
-    modal.style.display = 'flex';
-    modal.setAttribute('aria-hidden', 'false');
+    modal.dataset.visible = "true";
+    modal.style.display = "flex";
+    modal.setAttribute("aria-hidden", "false");
     modal.focus();
 }
 
-
 function closeModal(modal) {
-    modal.dataset.visible = 'false';
-    modal.style.display = 'none';
-    modal.setAttribute('aria-hidden', 'true');
+    modal.dataset.visible = "false";
+    modal.style.display = "none";
+    modal.setAttribute("aria-hidden", "true");
 }
+
 
 
 // ---------- Thank You Page Population ----------
