@@ -51,69 +51,155 @@
         </nav>
     </header>
 
-    <main class="layout" id="content" role="main">
+    <main class="join-container" id="content" role="main">
     
-        <article class="card" data-level="bronze">
-            <h3>Bronze Membership</h3>
-            <p class="muted">Promotions, trainings, spotlight</p>
-            <a href="#" class="open-modal" data-target="bronze-modal">See benefits</a>
-        </article>
+        <section class="form-section">
+            <form method="get" action="thankyou.html" autocomplete="on">
     
-        <article class="card" data-level="silver">
-            <h3>Silver Membership</h3>
-            <p class="muted">Promotions, discounts, spotlight</p>
-            <a href="#" class="open-modal" data-target="silver-modal">See benefits</a>
-        </article>
+                <label>
+                    First Name
+                    <input type="text" name="firstName" title="Enter your first name" required autocomplete="given-name">
+                </label>
     
-        <article class="card" data-level="gold">
-            <h3>Gold Membership</h3>
-            <p class="muted">Premium placement &amp; priority access</p>
-            <a href="#" class="open-modal" data-target="gold-modal">See benefits</a>
-        </article>
+                <label>
+                    Last Name
+                    <input type="text" name="lastName" title="Enter your last name" required autocomplete="family-name">
+                </label>
     
-        <!-- Modals -->
-        <div id="bronze-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="bronze-title"
-            aria-hidden="true" tabindex="-1">
+                <label>
+                    Organizational Title
+                    <input type="text" name="orgTitle" title="Enter your role in your organization"
+                        autocomplete="organization-title" pattern="^[A-Za-z\- ]{7,}$" minlength="7">
+                </label>
+    
+                <label>
+                    Email
+                    <input type="email" name="email" title="Enter your email" required autocomplete="email"
+                        placeholder="example@domain.com">
+                </label>
+    
+                <label>
+                    Mobile Phone
+                    <input type="tel" name="phone" title="Enter your mobile number" required autocomplete="tel">
+                </label>
+    
+                <label>
+                    Organization Name
+                    <input type="text" name="organization" title="Enter your organization name" required
+                        autocomplete="organization">
+                </label>
+    
+                <label>
+                    Membership Level
+                    <select name="membershipLevel" title="Choose membership level" required>
+                        <option value="">Select Level</option>
+                        <option value="np">NP Membership (No Fee)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+    
+                <label>
+                    Organization Description
+                    <textarea name="description" title="Describe your organization"></textarea>
+                </label>
+    
+                <input type="hidden" name="timestamp" id="timestamp">
+    
+                <input type="submit" value="Submit Application" title="Submit membership form">
+                
+    
+            </form>
+        </section>
+    
+        <!-- Membership Cards (Right on desktop, below on mobile) -->
+        <section class="membership-cards">
+    
+            <article class="card">
+                <h3>NP Membership</h3>
+                <a href="#" class="open-modal" data-target="np-modal">See benefits</a>
+            </article>
+    
+            <article class="card">
+                <h3>Bronze Membership</h3>
+                <a href="#" class="open-modal" data-target="bronze-modal">See benefits</a>
+            </article>
+    
+            <article class="card">
+                <h3>Silver Membership</h3>
+                <a href="#" class="open-modal" data-target="silver-modal">See benefits</a>
+            </article>
+    
+            <article class="card">
+                <h3>Gold Membership</h3>
+                <a href="#" class="open-modal" data-target="gold-modal">See benefits</a>
+            </article>
+    
+        </section>
+    
+        <!-- ===== 4 MODALS ===== -->
+        <div id="np-modal" class="modal" role="dialog" aria-hidden="true" tabindex="-1">
             <div class="modal-content">
-                <button class="close-modal" aria-label="Close">×</button>
-                <h3 id="bronze-title">Bronze Membership Benefits</h3>
+                <button class="close-modal">×</button>
+                <h3>NP Membership Benefits</h3>
                 <ul>
-                    <li>Access to member trainings</li>
-                    <li>Invitations to networking events</li>
-                    <li>Featured directory promotion</li>
+                    <li>Free consultations</li>
+                    <li>Community support inclusion</li>
+                    <li>Directory listing</li>
                 </ul>
             </div>
         </div>
     
-        <div id="silver-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="silver-title"
-            aria-hidden="true" tabindex="-1">
+        <div id="bronze-modal" class="modal" role="dialog" aria-hidden="true" tabindex="-1">
             <div class="modal-content">
-                <button class="close-modal" aria-label="Close">×</button>
-                <h3 id="silver-title">Silver Membership Benefits</h3>
+                <button class="close-modal">×</button>
+                <h3>Bronze Membership Benefits</h3>
                 <ul>
-                    <li>Spotlight advertisements</li>
-                    <li>Social media promotions</li>
-                    <li>Discounts for chamber events</li>
+                    <li>Access to trainings</li>
+                    <li>Event invitations</li>
+                    <li>Basic ads listing</li>
                 </ul>
             </div>
         </div>
     
-        <div id="gold-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="gold-title" aria-hidden="true"
-            tabindex="-1">
+        <div id="silver-modal" class="modal" role="dialog" aria-hidden="true" tabindex="-1">
             <div class="modal-content">
-                <button class="close-modal" aria-label="Close">×</button>
-                <h3 id="gold-title">Gold Membership Benefits</h3>
+                <button class="close-modal">×</button>
+                <h3>Silver Membership Benefits</h3>
                 <ul>
-                    <li>Top-tier advertising and homepage spotlight</li>
-                    <li>Premium event access and reserved seating</li>
-                    <li>Custom promotional campaigns</li>
+                    <li>Event discounts</li>
+                    <li>Social media spotlights</li>
+                    <li>Priority listing</li>
                 </ul>
             </div>
         </div>
+    
+        <div id="gold-modal" class="modal" role="dialog" aria-hidden="true" tabindex="-1">
+            <div class="modal-content">
+                <button class="close-modal">×</button>
+                <h3>Gold Membership Benefits</h3>
+                <ul>
+                    <li>Homepage spotlight ads</li>
+                    <li>Premium event perks</li>
+                    <li>Max discounts</li>
+                </ul>
+            </div>
+        </div>
+
+        <form action="thankyou.html" method="get">
+            <input type="text" name="firstName" required>
+            <input type="text" name="lastName" required>
+            <input type="email" name="email" required>
+            <input type="tel" name="mobile" required>
+            <input type="text" name="businessName" required>
+            <input type="hidden" name="timestamp" value="">
+            <button type="submit">Submit</button>
+        </form>
     
     </main>
 
-
+    
     <!-- FOOTER -->
     <footer>
         <div class="social">

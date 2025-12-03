@@ -81,21 +81,29 @@ function closeModal(modal) {
 // ---------- Thank You Page Population ----------
 function populateThankYouPage() {
     const params = new URLSearchParams(window.location.search);
-    if (!document.body.classList.contains('thankyou-page')) return;
-
 
     const fields = [
-        'firstName',
-        'lastName',
-        'email',
-        'phone',
-        'organization',
-        'timestamp'
+        { param: 'firstName', id: 'out-firstName' },
+        { param: 'lastName', id: 'out-lastName' },
+        { param: 'email', id: 'out-email' },
+        { param: 'mobile', id: 'out-phone' },
+        { param: 'businessName', id: 'out-organization' },
+        { param: 'timestamp', id: 'out-timestamp' }
     ];
 
-
     fields.forEach(field => {
-        const el = document.getElementById(field + '-display');
-        if (el) el.textContent = params.get(field) || '(not provided)';
+        const el = document.getElementById(field.id);
+        if (el) el.textContent = params.get(field.param) || '(not provided)';
     });
 }
+
+
+//Get form details
+
+const urlParams = new URLSearchParams(window.location.search);
+document.getElementById("firstName").textContent = urlParams.get('firstName');
+document.getElementById("lastName").textContent = urlParams.get('lastName');
+document.getElementById("email").textContent = urlParams.get('email');
+document.getElementById("mobile").textContent = urlParams.get('mobile');
+document.getElementById("businessName").textContent = urlParams.get('businessName');
+document.getElementById("timestamp").textContent = urlParams.get('timestamp');

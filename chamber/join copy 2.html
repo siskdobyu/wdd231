@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Makati City Chamber of Commerce Join Page</title>
+    <meta name="description" content="Joining Page for the Makati City Chamber of Commerce.">
+    <meta name="author" content="Karina Dolojan">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- JS -->
+    <script src="scripts/join.js" defer></script>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Makati City Chamber of Commerce">
+    <meta property="og:description" content="Discover local businesses in our official chamber directory.">
+    <meta property="og:image" content="https://siskdobyu.github.io/wdd231/chamber/images/social-share.jpg">
+    <meta property="og:url" content="https://siskdobyu.github.io/wdd231/chamber/directory.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Makati City Chamber of Commerce Directory</h1>
+
+        <nav>
+            <button id="menuBtn">☰</button>
+            <ul id="navMenu" class="hidden">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="layout" id="content" role="main">
+    
+        <article class="card" data-level="bronze">
+            <h3>Bronze Membership</h3>
+            <p class="muted">Promotions, trainings, spotlight</p>
+            <a href="#" class="open-modal" data-target="bronze-modal">See benefits</a>
+        </article>
+    
+        <article class="card" data-level="silver">
+            <h3>Silver Membership</h3>
+            <p class="muted">Promotions, discounts, spotlight</p>
+            <a href="#" class="open-modal" data-target="silver-modal">See benefits</a>
+        </article>
+    
+        <article class="card" data-level="gold">
+            <h3>Gold Membership</h3>
+            <p class="muted">Premium placement &amp; priority access</p>
+            <a href="#" class="open-modal" data-target="gold-modal">See benefits</a>
+        </article>
+    
+        <!-- Modals -->
+        <div id="bronze-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="bronze-title"
+            aria-hidden="true" tabindex="-1">
+            <div class="modal-content">
+                <button class="close-modal" aria-label="Close">×</button>
+                <h3 id="bronze-title">Bronze Membership Benefits</h3>
+                <ul>
+                    <li>Access to member trainings</li>
+                    <li>Invitations to networking events</li>
+                    <li>Featured directory promotion</li>
+                </ul>
+            </div>
+        </div>
+    
+        <div id="silver-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="silver-title"
+            aria-hidden="true" tabindex="-1">
+            <div class="modal-content">
+                <button class="close-modal" aria-label="Close">×</button>
+                <h3 id="silver-title">Silver Membership Benefits</h3>
+                <ul>
+                    <li>Spotlight advertisements</li>
+                    <li>Social media promotions</li>
+                    <li>Discounts for chamber events</li>
+                </ul>
+            </div>
+        </div>
+    
+        <div id="gold-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="gold-title" aria-hidden="true"
+            tabindex="-1">
+            <div class="modal-content">
+                <button class="close-modal" aria-label="Close">×</button>
+                <h3 id="gold-title">Gold Membership Benefits</h3>
+                <ul>
+                    <li>Top-tier advertising and homepage spotlight</li>
+                    <li>Premium event access and reserved seating</li>
+                    <li>Custom promotional campaigns</li>
+                </ul>
+            </div>
+        </div>
+    
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="social">
+            <a href="https://siskdobyu.github.io/wdd231">
+                <img src="images/github.svg" alt="github icon" width="16" height="16">
+            </a>
+            <a href="https://www.linkedin.com/in/karina-dolojan/">
+                <img src="images/linkedin.svg" alt="linkedin icon" width="16" height="16">
+            </a>
+            <a href="#">
+                <img src="images/facebook.svg" alt="facebook icon" width="16" height="16">
+            </a>
+        </div>
+       
+        <p>&copy;<span id="currentyear"></span> Karina Dolojan | Philippines | Last Modification:</p>
+        <p> Last Modification: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+</html>
