@@ -1,22 +1,20 @@
-// // Set timestamp value
-// document.getElementById("timestamp").value = new Date().toISOString();
+// ---------------------
+// MOBILE MENU
+// ---------------------
+const menuBtn = document.querySelector("#menuBtn");
+const navMenu = document.querySelector("#navMenu");
 
-// // Modal functions
-// function openModal(id) {
-//     document.getElementById(id).style.display = "block";
-// }
-// function closeModal(id) {
-//     document.getElementById(id).style.display = "none";
-// }
+menuBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("hidden");
+});
 
-// // Mobile menu toggle
-// document.getElementById("menuBtn").addEventListener("click", () => {
-//     document.getElementById("navMenu").classList.toggle("hidden");
-// });
 
-// // Footer dates
-// document.getElementById("currentyear").textContent = new Date().getFullYear();
-// document.getElementById("lastModified").textContent = document.lastModified;
+// ---------------------
+// FOOTER DATES
+// ---------------------
+document.querySelector("#currentyear").textContent = new Date().getFullYear();
+document.querySelector("#lastModified").textContent = document.lastModified;
+
 
 window.addEventListener('DOMContentLoaded', () => {
     const timestampField = document.getElementById('timestamp');
