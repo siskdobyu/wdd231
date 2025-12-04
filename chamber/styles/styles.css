@@ -323,12 +323,6 @@ textarea {
     margin: 0 auto;
 }
 
-input,
-select,
-textarea {
-    width: 100%;
-    box-sizing: border-box;
-}
 
 .form-section form {
     padding: 1.5rem;
