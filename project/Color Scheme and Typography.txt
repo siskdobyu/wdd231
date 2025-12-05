@@ -1,0 +1,7 @@
+Color Scheme
+#0057A3 (Primary Blue) → Used for headings,header bar, and navigation section background.
+#7ED957 (Accent Green) → Used for buttons, highlights, link accents, and call-to-action elements<
+
+Typography
+
+Poppins (Google Font)</strong> → Used for all headings and body text for a clean, warm, and modern appearance.
