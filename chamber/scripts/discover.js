@@ -3,10 +3,21 @@ document.querySelector("#currentyear").textContent = new Date().getFullYear();
 
 document.getElementById("lastModified").innerHTML = document.lastModified;
 
+// ---------------------
+// MOBILE MENU
+// ---------------------
+const menuBtn = document.querySelector("#menuBtn");
+const navMenu = document.querySelector("#navMenu");
+
+menuBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("hidden");
+});
+
+
 //Export Interests
 import { places } from "../data/places.mjs";
 
-const showhere = document.querySelector("#cards-container");
+const showhere = document.querySelector("#allplaces");
 
 function displayItems(places) {
     places.forEach(x => {
@@ -40,3 +51,52 @@ function displayItems(places) {
 
 displayItems(places);
 
+//visit tracking
+const messageDisplay = document.getElementById('visit-message');
+const LS_KEY = 'lastVisitDate';
+const currentDate = Date.now();
+const lastVisitString = localStorage.getItem(LS_KEY);
+
+if (lastVisitString === null) {
+    // First Visit
+
+    // Display the initial welcome message
+    messageDisplay.textContent = "Welcome! Let us know if you have any questions.";
+} 
+
+else {
+    // Subsequent Visits
+
+    const lastVisitDate = Number(lastVisitString); // Convert stored string to number (milliseconds)
+    // Calculate the difference in milliseconds
+    const timeDifference = currentDate - lastVisitDate;
+
+    // Define constants for time conversion (milliseconds)
+    const millisecondsInDay = 1000 * 60 * 60 * 24;
+
+    // Calculate the difference in days (including fractions)
+    const daysDifference = timeDifference / millisecondsInDay;
+
+    if (daysDifference < 1) {
+        // Less than 24 hours (less than 1 day)
+        messageDisplay.textContent = "Back so soon! Awesome!";
+
+    } else {
+        // 1 day or more
+
+        // Round down to get the whole number of days
+        const daysAgo = Math.floor(daysDifference);
+
+        let message;
+        if (daysAgo === 1) {
+            message = "You last visited 1 day ago.";
+        } else {
+            message = `You last visited ${daysAgo} days ago.`;
+        }
+
+        messageDisplay.textContent = message;
+    }
+}
+
+// Update localStorage with the current visit date for next time
+localStorage.setItem(LS_KEY, currentDate);

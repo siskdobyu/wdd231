@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Makati City Chamber of Commerce Directory</title>
-    <meta name="description"
-        content="Business directory for the Makati City Chamber of Commerce.">
+    <meta name="description" content="Business directory for the Makati City Chamber of Commerce.">
     <meta name="author" content="Karina Dolojan">
 
     <!-- Google Font -->
@@ -21,30 +20,35 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
 
-    <script src="scripts/home.js" defer></script>
-
-    <meta property="og:title" content="Makati City Chamber of Commerce">
-    <meta property="og:description" content="Explore events, weather, and local business spotlights in Makati City.">
-    <meta property="og:image" content="https://siskdobyu.github.io/wdd231/chamber/images/social-share.jpg">
-    <meta property="og:url" content="https://siskdobyu.github.io/wdd231/chamber/index.html">
-
     <!-- CSS -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
+
+    <script src="scripts/home.js" defer></script>
 </head>
 
 <body>
-
     <header>
         <h1>Makati City Chamber of Commerce</h1>
 
-        <nav>
-            <button id="menuBtn">  ☰</button>
+        <!-- Desktop Menu -->
+        <nav class="desktop-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <nav class="mobile-menu">
+            <button id="menuBtn">☰ Menu</button>
             <ul id="navMenu" class="hidden">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
                 <li><a href="discover.html">Discover</a></li>
             </ul>
@@ -52,52 +56,42 @@
     </header>
 
     <main>
+        <section class="hero">
+            <img src="images/hero.jpg" alt="Makati City Skyline Hero Image">
+            <div class="hero-text">
+                <h2>Supporting Business Growth in Makati City</h2>
+                <h3>Connect. Grow. Thrive.</h3>
+                <a class="cta-btn" href="join.html">Join the Chamber</a>
+            </div>
+        </section>
 
-        <!-- <div class="view-buttons">
-            <button id="gridBtn">Grid View</button>
-            <button id="listBtn">List View</button>
-        </div> -->
-        <!-- <section id="directory" class="grid"></section> -->
-    <section class="hero">
-        <img src="images/hero.jpg" alt="Makati City Skyline Hero Image">
-        <div class="hero-text">
-            <h2>Supporting Business Growth in Makati City</h2>
-            <h3>Connect. Grow. Thrive.</h3>
-            <a class="cta-btn" href="join.html">Join the Chamber</a>
-        </div>
-    </section>
+        <section class="events">
+            <h2>Current Events</h2>
+            <ul>
+                <li><strong>December 10, 2025:</strong> Business Networking Breakfast</li>
+                <li><strong>January 19, 2026:</strong> Small Enterprise Digital Workshop</li>
+                <li><strong>Mar 04, 2026:</strong> Makati Business Expo 2026</li>
+            </ul>
+        </section>
 
-    <section class="events">
-        <h2>Current Events</h2>
-        <ul>
-            <li><strong> December 10, 2025:</strong> Business Networking Breakfast</li>
-            <li><strong>January 19, 2026:</strong> Small Enterprise Digital Workshop</li>
-            <li><strong>Mar 04, 2026:</strong> Makati Business Expo 2026</li>
-        </ul>
-    </section>
+        <section class="weather">
+            <h2>Local Weather</h2>
+            <div id="currentWeather"></div>
+            <h3>3-Day Forecast</h3>
+            <div id="forecast" class="forecast-grid"></div>
+        </section>
 
-    <section class="weather">
-        <h2>Local Weather</h2>
-    
-        <div id="currentWeather"></div>
-    
-        <h3>3-Day Forecast</h3>
-        <div id="forecast" class="forecast-grid"></div>
-    </section>
-
-    <section class="spotlights">
-        <h2>Business Spotlights</h2>
-        <div id="spotlights" class="spotlights"></div>
-    </section>
-
+        <section class="spotlights">
+            <h2>Business Spotlights</h2>
+            <div id="spotlights" class="spotlights"></div>
+        </section>
     </main>
 
     <footer>
         <div class="social">
-            <a href="https://siskdobyu.github.io/wdd231"><img src="images/github.svg" alt="github icon" width="16" height="16"></a>
-            <a href="https://www.linkedin.com/in/karina-dolojan/"><img src="images/linkedin.svg" alt="linkedin icon" width="16"
-                    height="16"></a>
-            <a href="#"><img src="images/facebook.svg" alt="facebook icon" width="16" height="16"></a>
+            <a href="#"><img src="images/github.svg" alt="github icon"></a>
+            <a href="#"><img src="images/linkedin.svg" alt="linkedin icon"></a>
+            <a href="#"><img src="images/facebook.svg" alt="facebook icon"></a>
         </div>
         <p>&copy;<span id="currentyear"></span> Karina Dolojan | Philippines | Last Modification:</p>
         <p><span id="lastModified"></span></p>

@@ -1,13 +1,39 @@
-@media only screen and (min-width: 641px) and (max-width: 1024px) {
+@media (min-width: 641px) and (max-width: 1024px) {
 
+  
     #allplaces div {
         grid-template-areas:
             "photograph name"
             "photograph description"
             "photograph location";
+
+        text-align: center;
+        justify-content: space-between;
+        padding: 10px 10px;
     }
 
     #allplaces div img {
         width: 300px;
+        height: auto;
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-} /*end of media query */
+
+    #allplaces div h2,
+    #allplaces div p,
+    #allplaces div address {
+        /* Reduce top and bottom margins for all these elements */
+        margin-top: 0.3rem;
+        margin-bottom: 0.3rem;
+    }
+
+    #allplaces div:hover img {
+        /* Subtle zoom effect */
+        transform: scale(1.05);
+    
+        /* Slight shadow to make the image appear lifted */
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+}

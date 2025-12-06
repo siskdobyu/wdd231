@@ -1,8 +1,59 @@
 @media only screen and (min-width: 1025px) {
-    #allplaces {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
+
+      /* Desktop menu */
+    .desktop-menu {
+        display: flex;
     }
 
-} /*end of media query */
+    /* Hide mobile menu on desktop */
+    .mobile-menu {
+        display: none;
+    }
+
+ /* #allplaces cards layout on desktop */
+ #allplaces div{
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 2rem;
+     text-align: center;
+     justify-content: space-between;
+     padding: 10px 10px;
+    
+ }
+
+ #allplaces div img {
+    width: 300px;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+ }
+
+ #allplaces div:hover img {
+     /* Subtle zoom effect */
+     transform: scale(1.05);
+
+     /* Slight shadow to make the image appear lifted */
+     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+ }
+
+#allplaces div h2,
+#allplaces div p,
+#allplaces div address {
+    /* Reduce top and bottom margins for all these elements */
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    padding: 10px;
+    word-wrap: break-word;
+    justify-content: center;
+    margin: 1rem auto 4rem auto;
+}
+}
