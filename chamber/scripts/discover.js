@@ -17,9 +17,11 @@ menuBtn.addEventListener("click", () => {
 //Export Interests
 import { places } from "../data/places.mjs";
 
-const showhere = document.querySelector("#allplaces");
 
 function displayItems(places) {
+
+    const showhere = document.querySelector("#allplaces");
+    
     places.forEach(x => {
         // build the card element
         const thecard = document.createElement('div')
