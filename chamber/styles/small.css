@@ -312,7 +312,7 @@ textarea {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 1.5rem;
     padding: 10px;
-    word-wrap: break-word;
+    overflow-wrap: break-word;
     justify-content: center;
     margin: 1rem auto 4rem auto;
 }
