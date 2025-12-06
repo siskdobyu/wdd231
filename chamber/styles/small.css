@@ -281,7 +281,7 @@ textarea {
     /* keep them in one row */
 }
 
-.card {
+/* .card {
     width: 500px;
     
 }
@@ -291,7 +291,7 @@ textarea {
     margin-top: .5rem;
     color: #003366;
     text-decoration: underline;
-}
+} */
 
 .membership-cards .card {
     opacity: 0;
