@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Makati City Chamber of Commerce</title>
-    <meta name="description"
-        content="Homepage of the Makati City Chamber of Commerce.">
+    <title>Discover Makati City Chamber of Commerce</title>
+    <meta name="description" content="Discover Makati City Chamber of Commerce.">
     <meta name="author" content="Karina Dolojan">
 
     <!-- Google Font -->
@@ -21,12 +20,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
 
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/discover.js" type="module" defer></script>
 
     <meta property="og:title" content="Makati City Chamber of Commerce">
-    <meta property="og:description" content="Discover local businesses in our official chamber directory.">
+    <meta property="og:description" content="Explore events, weather, and local business spotlights in Makati City.">
     <meta property="og:image" content="https://siskdobyu.github.io/wdd231/chamber/images/social-share.jpg">
-    <meta property="og:url" content="https://siskdobyu.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://siskdobyu.github.io/wdd231/chamber/index.html">
 
     <!-- CSS -->
     <link rel="stylesheet" href="styles/normalize.css">
@@ -38,10 +37,10 @@
 <body>
 
     <header>
-        <h1>Makati City Chamber of Commerce Directory</h1>
+        <h1>Makati City Chamber of Commerce</h1>
 
         <nav>
-            <button id="menuBtn">  ☰</button>
+            <button id="menuBtn"> ☰</button>
             <ul id="navMenu" class="hidden">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="directory.html" class="active">Directory</a></li>
@@ -52,28 +51,23 @@
     </header>
 
     <main>
-
-        <div class="view-buttons">
-            <button id="gridBtn">Grid View</button>
-            <button id="listBtn">List View</button>
-        </div>
-
-        <section id="directory" class="grid"></section>
+        <div id="cards-container"></div>
 
     </main>
-
+    
     <footer>
         <div class="social">
-            <a href="https://siskdobyu.github.io/wdd231"><img src="images/github.svg" alt="github icon" width="16" height="16"></a>
-            <a href="https://www.linkedin.com/in/karina-dolojan/"><img src="images/linkedin.svg" alt="linkedin icon" width="16"
+            <a href="https://siskdobyu.github.io/wdd231"><img src="images/github.svg" alt="github icon" width="16"
                     height="16"></a>
+            <a href="https://www.linkedin.com/in/karina-dolojan/"><img src="images/linkedin.svg" alt="linkedin icon"
+                    width="16" height="16"></a>
             <a href="#"><img src="images/facebook.svg" alt="facebook icon" width="16" height="16"></a>
         </div>
         <p>&copy;<span id="currentyear"></span> Karina Dolojan | Philippines | Last Modification:</p>
         <p><span id="lastModified"></span></p>
     </footer>
-
     
-</body>
-
-</html>
+    
+    </body>
+    
+    </html>
