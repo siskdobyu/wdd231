@@ -60,3 +60,26 @@
      color: white;
      font-size: 16px;
  }
+
+ /* Desktop menu visible by default */
+ .desktop-menu {
+     display: flex;
+ }
+
+ /* Mobile menu hidden by default */
+ .mobile-menu {
+     display: none;
+ }
+
+ #menuBtn {
+     background: none;
+     border: none;
+     color: white;
+     font-size: 2rem;
+     cursor: pointer;
+ }
+
+ /* Hide mobile menu links initially */
+ .hidden {
+     display: none;
+ }
