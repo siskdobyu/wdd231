@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 231 MindCare PH Mental Health Basics Page">
+    <meta name="author" content="Karina Dolojan">
+    <title>WDD 231 MindCare PH Mental Health Basics</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!--Style sheets-->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/script.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>MindCare PH</h1>
+        <!-- Desktop Menu -->
+        <nav class="desktop-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mentalhealth-basics.html">Mental Health Basics</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <nav class="mobile-menu">
+            <button id="menuBtn">☰ Menu</button>
+            <ul id="navMenu" class="hidden">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mentalhealth-basics.html">Mental Health Basics</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">        
+        <article>
+            <h2>What is Mental Health?</h2>
+            <p>Mental health is the foundation of well-being and effective functioning for an individual and a community.</p>
+            <img src="images/twistedmindhorizontal.jpg" loading="lazy" alt="mind image">
+            <p>It encompasses your emotional, psychological, and social well-being. It affects:
+            <ul>            
+            <li>How you think and feel.</li>            
+            <li>How you handle stress.</li>            
+            <li>How you relate to others.</li>            
+            <li>The choices you make.</li>
+            </ul>
+            </p>
+            <p>Mental health is critical at every stage of life, from childhood and adolescence through adulthood. It's more than just the absence of mental illness; it's about being able to realize your potential, cope with normal life stresses, work productively, and contribute to your community.</p>
+            <h2>Common Mental Health Issues in the Philippines</h2>
+            <p>While people in the Philippines may face a range of mental health conditions, the following are frequently reported or
+            discussed, often compounded by cultural or socioeconomic factors.</p>
+            <p>Click on each link to see their description.</p>            
+            <ul>
+                <li style="list-style-type:none;"></li>            
+                <li style="list-style-type:none;"></li>
+                <li style="list-style-type:none;"></li>
+            </ul>
+        </article>
+        <section class="common-mentalhealth-issues">
+        
+            <article class="card">
+                <!-- <h3>Depression</h3> -->
+                <img src="images/depression.jpg" loading="lazy" alt="depressed person">
+                <a href="#" class="open-modal" data-target="depression-modal">Key Symptoms</a>
+            </article>
+        
+            <article class="card">
+                <!-- <h3>Anxiety Disorders</h3> -->
+                <img src="images/anxiety.jpg" loading="lazy" alt="anxiety">
+                <a href="#" class="open-modal" data-target="anxiety-modal">Key Symptoms</a>
+            </article>        
+            <article class="card">
+                <!-- <h3>Stress and Distress related to Trauma</h3> -->
+                <img src="images/stress.jpg" loading="lazy" alt="stress">
+                <a href="#" class="open-modal" data-target="stress-modal">Key Symptoms</a>
+            </article>                
+        </section>
+        
+        <!-- ===== 3 MODALS ===== -->
+        <div id="depression-modal" class="modal" role="dialog" aria-hidden="true" tabindex="-1">
+            <div class="modal-content">
+                <button class="close-modal">×</button>
+                <h3>Depression is a mood disorder that causes a persistent feeling of sadness and loss of interest.</h3>
+                <p>Key Symptoms:</p>
+                <ul>
+                    <li>Persistent sadness, anxiety, or "empty" mood.</li>
+                    <li>Feelings of hopelessness or pessimism.</li>
+                    <li>Loss of interest or pleasure in hobbies and activities.</li>
+                    <li>Fatigue or decreased energy.</li>
+                    <li>Difficulty sleeping (insomnia) or sleeping too much.</li>
+                    <li>Thoughts of death or suicide.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="anxiety-modal" class="modal" role="dialog" aria-hidden="true" tabindex="-1">
+            <div class="modal-content">
+                <button class="close-modal">×</button>
+                <h3>Anxiety disorders involve constant, excessive worry and fear that interferes with daily life. These can include Generalized Anxiety Disorder (GAD), panic disorder, and phobias.</h3>
+                <p>Key Symptoms:</p>
+                <ul>
+                    <li>Feeling restless, keyed up, or on edge.</li>
+                    <li>Being easily fatigued.</li>
+                    <li>Difficulty concentrating.</li>
+                    <li>Irritability.</li>
+                    <li>Muscle tension.</li>
+                    <li>Difficulty controlling feelings of worry.</li>
+                </ul>
+            </div>
+        </div>        
+        <div id="stress-modal" class="modal" role="dialog" aria-hidden="true" tabindex="-1">
+            <div class="modal-content">
+                <button class="close-modal">×</button>
+                <h3>Many Filipinos face stress related to economic challenges, natural disasters, or the emotional impact of having family members working abroad (known as Overseas Filipino Workers or OFWs). Trauma can lead to Post-Traumatic Stress Disorder
+                (PTSD) or adjustment issues.</h3>
+                <p>Key Symptoms:</p>
+                <ul>
+                    <li>Avoidance of places, people, or activities that remind them of the event.</li>
+                    <li>Reliving the event through nightmares or flashbacks.</li>
+                    <li>Hyper-vigilance (being easily startled or constantly on guard).</li>
+                    <li>Changes in mood and thought patterns (e.g., negative feelings about oneself or the world).</li>
+                </ul>
+            </div>
+        </div>
+        <section>
+            <!-- <div class="card-grid"> -->
+                <!-- <article class="card"> -->
+                    <p>If you or someone you know is facing a mental health crisis, you can call one of the free 24/7 hotlines available in the Philippines.</p>
+                    <p><a href="index.html">Need help now?</a></p>
+                <!-- </article> -->
+            <!-- </div> -->
+        </section>
+        
+
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> MindCare PH | Helping you find support that matters.</p>
+        <p>Disclaimer: This site provides information only and is not a substitute for professional medical advice.</p>
+        <p>Last Update: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>

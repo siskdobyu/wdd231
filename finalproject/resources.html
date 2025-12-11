@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 231 MindCare PH Mental Health Resources Page">
+    <meta name="author" content="Karina Dolojan">
+    <title>WDD 231 MindCare PH Mental Health Resources</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!--Style sheets-->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/script.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>MindCare PH</h1>
+        <!-- Desktop Menu -->
+        <nav class="desktop-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mentalhealth-basics.html">Mental Health Basics</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <nav class="mobile-menu">
+            <button id="menuBtn">☰ Menu</button>
+            <ul id="navMenu" class="hidden">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mentalhealth-basics.html">Mental Health Basics</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">        
+        <h1>Mental Health Resources</h1>        
+        <section id="institutions-list">
+            <h2>Free or Low-Cost Mental Health Institutions</h2>
+            <p>Find psychiatric institutions, hospital departments, and community-based facilities that offer affordable mental health care.</p>
+        <div class="institution-listing grid-layout">
+        
+        <article class="resource-card institution">
+            <h3>National Center for Mental Health (NCMH)</h3>
+            <p><strong>Address:</strong> NCMH Compound, Nueve de Pebrero St., Mandaluyong City</p>
+            <p><strong>Services:</strong> Comprehensive psychiatric services, psychological testing, and emergency services.</p>
+            <p><strong>Contact:</strong> <a href="tel:0285319003">(02) 8531-9003</a></p>
+            <p><strong>Operating Hours:</strong> Varies; Emergency Services are 24/7</p>
+            <p><a href="https://ncmh.gov.ph/" target="_blank">Visit NCMH Website</a></p>
+        </article>
+        
+        <article class="resource-card institution">
+            <h3>Philippine General Hospital (PGH) Psychiatry Department</h3>
+            <p><strong>Address:</strong> Taft Avenue, Ermita, Manila</p>
+            <p><strong>Services:</strong> Outpatient consultations, specialized clinics, and mental health training programs.
+            </p>
+            <p><strong>Contact:</strong> <a href="tel:0285548400"> (02) 8554-8400</a> loc. 2436</p>
+            <p><strong>Operating Hours:</strong> Weekdays (by appointment)</p>
+            <p><a href="https://pghopd.up.edu.ph/">Visit PGH Online Consultation and Appointment System</a></p>
+        </article>
+        
+        </div>
+        </section>
+        
+        <section id="online-consultations">
+            <h2>Free or Low-Cost Online Consultations</h2>
+            <p>A list of platforms and programs offering teletherapy and virtual mental health support, often at reduced rates or free on certain days.</p>
+        
+            <ul class="consultation-list">
+                <li>
+                    <strong>LGU/MSWD Telemedicine Programs:</strong> Check your local government unit's (LGU) or Municipal Social
+                    Welfare and Development (MSWD) office for subsidized or free virtual counseling services.
+                </li>
+                <li>
+                    <strong>University Psychology Clinics:</strong> Many universities (e.g., <a href="https://www.facebook.com/updpsycserv/" target="_blank">UP PsycServ (Psychosocial Services)</a>, <a href="https://ateneobulataocenter.com/faqs/" target="_blank">Ateneo Bulatao Center</a>, <a href="tel:+639171521817">UST Mental Health Responders (Viber/Text)</a>) offer free or very low-cost teletherapy sessions conducted by supervised graduate students.
+                </li>
+                <li>
+                    <a href="https://mindcareclub.org/"><strong>MindCare Club:</strong></a> is a pioneering tele-mental healthcare service provider in the Philippines that offers online consultations with a network of psychiatrists, psychologists, and counselors. They provide comprehensive, accessible, affordable, and high-quality mental health support o Filipinos both locally and globally.
+                </li>
+                <li>
+                    <a href="https://konsulta.md/"><strong>KonsultaMD:</strong></a> Offers 24/7 telemedicine, including mental health
+                    consults. Fees apply, but look for subscription options.
+                </li>
+            </ul>
+        </section>
+        
+        <section id="medicine-access">
+            <h2>Medicine Access</h2>
+            <p>Information on where to find affordable psychiatric medications and programs to help ease the cost of treatment.
+            </p>
+        
+            <div class="medicine-info">        
+                <article>
+                    <h3>Affordable Medication Sources</h3>
+                    <ul>
+                        <li><strong>Medicine Access Programs:</strong> Inquire about programs like Botika ng Bayan or DOH drug assistance at local health centers.</li>
+                        <li><strong>Generic Pharmacies:</strong> Stores specializing in generics (e.g., Generika) often carry commonly prescribed mental health meds at lower prices than major chains.</li>
+                        <li><strong>Discounts:</strong> Utilize senior citizen, PWD, or PhilHealth benefits where applicable.</li>
+                    </ul>
+                </article>
+        
+                <article>
+                    <h3>Important Medication Information</h3>
+                    <ul>
+                        <li><strong>Prescription Reminders:</strong> Always consult a licensed psychiatrist for proper diagnosis and prescription. <span class="accent">Never self-medicate.</span></li>
+                        <li><strong>Commonly Prescribed Meds:</strong> <span class="urgent"> (Disclaimer: This is NOT medical advice.)</span> Common classes include SSRIs (antidepressants) and anti-anxiety medications, but the specific drug depends entirely on a doctor's evaluation.</li>
+                    </ul>
+                </article>        
+            </div>
+        </section>
+        
+        <section id="hotlines">
+            <h2>Emergency / Crisis Hotlines</h2>
+            <p><span class="urgent">If someone is in immediate danger, you may call these free, 24/7 hotlines.</span></p>
+        
+            <div id="directory" class="hotline-cards grid-layout">
+        
+                <article class="resource-card hotline">
+                    <h3>NCMH Crisis Hotline</h3>
+                    <p><strong>Service:</strong> Confidential mental health support and crisis intervention.</p>
+                    <p><strong>Contact:</strong> <a href="tel:1553">1553 (Luzon-wide, toll-free)</a> or <a
+                            href="tel:+63279898727">+63 (2) 7-989-8727</a></p>
+                    <p><strong>Operating Hours:</strong> 24/7</p>
+                </article>
+        
+                <article class="resource-card hotline">
+                    <h3>Hopeline Philippines</h3>
+                    <p><strong>Service:</strong> Crisis intervention and emotional support.</p>
+                    <p><strong>Contact:</strong> <a href="tel:09175584673">0917-558-4673</a> (Globe/TM)</p>
+                    <p><strong>Operating Hours:</strong> 24/7</p>
+                </article>
+        
+            </div>
+        </section>       
+        <section class="form-section">
+            <h2>Need to know more? Sign up to receive our weekly newsletter!</h2>
+                <form method="get" action="thankyou.html" autocomplete="on">
+        
+                    <label>
+                        First Name
+                        <input type="text" name="firstName" title="Enter your first name" required autocomplete="given-name">
+                    </label>
+        
+                    <label>
+                        Last Name
+                        <input type="text" name="lastName" title="Enter your last name" required autocomplete="family-name">
+                    </label>
+    
+        
+                    <label>
+                        Email
+                        <input type="email" name="email" title="Enter your email" required autocomplete="email"
+                            placeholder="example@domain.com">
+                    </label>
+        
+                    <label for="mobile-phone">
+                        Mobile Phone
+                        <input type="tel" id="mobile-phone" name="phone" title="Enter your mobile number" required autocomplete="tel">
+                    </label>      
+                         
+                           
+                    <input type="hidden" name="timestamp" id="timestamp-field">        
+                    <!-- <input type="submit" value="Submit" title="Submit subscription form"> -->
+                    <button type="submit">Submit</button>
+        
+        
+                </form>
+            </section>
+            
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> MindCare PH | Helping you find support that matters.</p>
+        <p>Disclaimer: This site provides information only and is not a substitute for professional medical advice.</p>
+        <p>Last Update: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>

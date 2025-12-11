@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDD 231 MindCare Homepage">
+    <meta name="description" content="WDD 231 MindCare PH Homepage">
     <meta name="author" content="Karina Dolojan">
-    <title>WDD 231 MindCare Homepage</title>
+    <title>WDD 231 MindCare PH Homepage</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -56,32 +56,45 @@
             <h3>Advocating. Guiding. Empowering.</h3>
             <a class="cta-btn" href="resources.html">Explore Resources</a>
         </div>
-        </section>
-    <section>
-        <h2 id="needhelp">Need help now?</h2>
-        <p>If someone is in <span class=urgent>immediate</span> danger, you may call these free, 24/7 hotlines:</p>
-    </section>
-    <section id="directory" class="grid">        
-        <!-- <p><strong>National Center for Mental Health Crisis Hotline</strong> — <a href="tel:180018881553">(1800) 1888-1553</a></p>
-        <p><strong>Tawag Paglaum - Centro Bisaya</strong> — <a href="tel:+639664679626">(+63) 966-467-9626</a></p>
-        <p><strong>Hopeline Philippines</strong> — <a href="tel:+63288044673">(+632) 8804-4673</a></p>
-        <p><strong>In Touch: Crisis Line</strong> — <a href="tel:+63288937603">(+632) 8893-7603</a></p> -->
     </section>
     <section>
         <h2>Our Purpose</h2>
-        <p>A lot of Filipinos need to find <span class="accent">free or low-cost</span> mental health institutions, consultations with licensed professionals, trusted medicine sources, and suicide
-        prevention hotlines. We also need to information or more understanding about the mental health basics. We need to break the stigma regarding mental health in the Philippines.</p>
+        <p>A lot of Filipinos need to find <span class="accent">free or low-cost</span> mental health institutions,
+            consultations with licensed professionals, trusted medicine sources, and suicide
+            prevention hotlines. We also need to information or more understanding about the mental health basics. We need
+            to break the stigma regarding mental health in the Philippines.</p>
     </section>
+    <section class="hero">
+        <image src="images/yourlifematters.jpg" alt="your life matters" loading="lazy">
+    </section>
+    <section id="needhelp" class="needhelp">
+        <h2>Need help now?</h2>
+        <p>If someone is in <span class=urgent>immediate</span> danger, you may call these free, 24/7 hotlines:</p>
+    </section>
+    <section id="directory" class="grid">        
+    </section> 
     <section>
-        <h2>Scenarios</h2>
-        <ul>
-            <li>Where can I book free or low-cost consultations for a mental health professional in the Philippines?</li>
-            <li>What suicide hotlines can I contact immediately for crisis support?</li>
-        </ul>
+        <div class="card-grid">
+            <article class="card">
+                <h3>What is mental health?</h3>
+                <p>Learn about the basics of mental health of Filipinos.</p>
+                <p><a href="mentalhealth-basics.html">Learn more</a></p>
+            </article>
+            <article class="card">
+                <h3>Where to get help</h3>
+                <p>Quick links to low-cost clinics and online support in the Philippines.</p>
+                <p><a href="resources.html">Find resources</a></p>
+            </article>
+            <article class="card">
+                <h3>Self-care & tips</h3>
+                <p><a href="https://www.doctoranywhere.ph/post/take-care-of-your-mental-health">Practical tips you can try now.</a></p>
+            </article>
+        </div>
     </section>
 </main>
 <footer>
     <p>&copy;<span id="currentyear"></span> MindCare PH | Helping you find support that matters.</p>
+    <p>Disclaimer: This site provides information only and is not a substitute for professional medical advice.</p>
     <p>Last Update: <span id="lastModified"></span></p>
 </footer>
 </body>

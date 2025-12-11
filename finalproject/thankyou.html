@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Makati City Chamber of Commerce - Thank You</title>
+    <meta name="description" content="Thank you page for MindCare PH Subscription form submission">
+    <meta name="author" content="Karina Dolojan">
+    <script src="scripts/script.js" defer></script>
+</head>
+
+<body class="thankyou-page">
+    <header class="site-header">
+        <div class="brand">
+            <h1 class="site-title">MindCare PH</h1>
+        </div>
+        <!-- Desktop Menu -->
+        <nav class="desktop-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mentalhealth-basics.html">Mental Health Basics</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <nav class="mobile-menu">
+            <button id="menuBtn">☰ Menu</button>
+            <ul id="navMenu" class="hidden">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mentalhealth-basics.html">Mental Health Basics</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="thank-you">
+        <h2>Thank you for your application</h2>
+        <p>We appreciate your interest in subscribing to the MindCare PH Weekly Newsletter. Below is the information you submitted:</p>
+
+        <div class="submission-details">
+            <p><strong>First Name:</strong> <span id="out-firstName"></span></p>
+            <p><strong>Last Name:</strong> <span id="out-lastName"></span></p>
+            <p><strong>Email:</strong> <span id="out-email"></span></p>
+            <p><strong>Mobile Phone:</strong> <span id="out-phone"></span></p>
+            <p><strong>Timestamp:</strong> <span id="out-timestamp"></span></p>
+        </div>
+
+        <p><a href="index.html">Return to Home</a></p>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> MindCare PH | Helping you find support that matters.</p>
+        <p>Disclaimer: This site provides information only and is not a substitute for professional medical advice.</p>
+        <p>Last Update: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>

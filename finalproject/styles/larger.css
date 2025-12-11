@@ -10,4 +10,15 @@
         display: none;
     }
 
+    /* Make the Medicine Access section two columns */
+    .medicine-info {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    /* Ensure resource cards look good on wider screens */
+    .resource-card {
+        padding: 25px;
+    }
+    
+
 }

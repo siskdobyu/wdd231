@@ -244,3 +244,215 @@
      word-break: break-word;
      overflow-wrap: break-word;
  }
+
+ .container {
+    padding: 10px;
+ }
+
+ .needhelp img {
+    max-width: 50%;
+    padding: 10px;
+    margin: 10px auto;
+    /* display: flex;
+    align-items: center; */
+ }
+
+ .common-mentalhealth-issues {
+     display: flex;
+     flex-direction: row;
+     gap: 16px;
+     /* space between cards */
+     justify-content: center;
+     /* optional: centers the row */
+     flex-wrap: nowrap;
+     /* keep them in one row */
+ }
+
+ .common-mentalhealth-issues img{
+    width: 70%;
+ }
+ /* === MODAL === */
+ .modal {
+     display: none;
+     position: fixed;
+     inset: 0;
+     background: rgba(0, 0, 0, 0.5);
+     justify-content: center;
+     align-items: center;
+ }
+
+ .modal-content {
+     background: #fff;
+     padding: 1.5rem;
+     border-radius: 8px;
+     width: 90%;
+     max-width: 400px;
+     position: relative;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+ }
+
+ .close-modal {
+     position: absolute;
+     top: 10px;
+     right: 14px;
+     background: none;
+     border: none;
+     font-size: 1.6rem;
+     cursor: pointer;
+     font-weight: bold;
+ }
+
+.container {
+    display: block;
+    gap: 1.5rem;
+    padding: 20px;
+    justify-items: center;
+    /* text-align: center; */
+    padding-top: 1.5rem;
+    margin-top: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+ }
+
+ .container img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60%;
+    height: auto
+
+ }
+
+ .container h2:first-of-type {
+    margin-top: 0;
+ }
+
+ article {
+    padding-top: 0;
+    margin-top: 0;
+    border-top: 0.1px solid transparent;
+    overflow: hidden;
+ }
+
+ .container h1 {
+     color: var(--primary);
+     font-size: 2.2rem;
+     margin-bottom: 20px;
+ }
+
+ /* The main container for the cards */
+ .institution-listing,
+ .hotline-cards {
+     /* Uses CSS Grid for a clean, responsive card layout */
+     display: grid;
+     /* Creates columns that are a minimum of 300px wide, max 1fr */
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     gap: 1.5rem;
+     /* Space between cards */
+     margin: 20px 0;
+ }
+
+ /* Individual Card Styles */
+ .resource-card {
+     background-color: #fff;
+     border: 1px solid var(--primary);
+     border-radius: 8px;
+     padding: 20px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     transition: transform 0.2s;
+     display: flex;
+     /* Helps align content within the card */
+     flex-direction: column;
+ }
+
+ .resource-card:hover {
+     transform: translateY(-5px);
+     /* Subtle lift on hover */
+     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+ }
+
+ .resource-card h3 {
+     color: var(--primary);
+     font-size: 1.2rem;
+     margin-top: 0;
+     margin-bottom: 10px;
+ }
+
+ .resource-card p {
+     margin-bottom: 8px;
+     font-size: 0.95rem;
+ }
+
+ .resource-card strong {
+     color: var(--dark);
+ }
+
+ /* Container for Medicine Access articles (two columns on desktop) */
+ .medicine-info {
+     display: grid;
+     grid-template-columns: 1fr;
+     /* Single column by default (mobile) */
+     gap: 2rem;
+     margin-top: 20px;
+     padding: 0 10px;
+ }
+
+ .medicine-info article {
+     padding: 15px;
+     background-color: var(--light);
+     /* Subtle background for distinction */
+     border-radius: 6px;
+     border-left: 5px solid var(--secondary);
+ }
+
+ .consultation-list {
+     list-style: disc inside;
+     padding-left: 20px;
+     line-height: 1.6;
+ }
+
+ .consultation-list li {
+     margin-bottom: 15px;
+     /* Style links within the list items */
+ }
+
+ /* Keyboard focus ring for accessibility */
+ input:focus,
+ select:focus,
+ textarea:focus,
+ button:focus,
+ .open-modal:focus {
+     outline: 3px solid;
+ }
+
+ label {
+     display: block;
+     /* ✅ forces one label per line */
+     width: 100%;
+     /* ✅ full width */
+     font-weight: bold;
+     margin-bottom: 0.2rem;
+ }
+
+ input,
+ select,
+ textarea {
+     width: 100%;
+     /* ✅ inputs also full width so they stack */
+     box-sizing: border-box;
+ }
+
+ .form-section {
+     width: 70%;
+     /* keeps space on both sides */
+     max-width: 1000px;
+     /* ← narrower column */
+     margin: 0 auto;
+ }
+
+
+ .form-section form {
+     padding: 1.5rem;
+     border-radius: 12px;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+ }
