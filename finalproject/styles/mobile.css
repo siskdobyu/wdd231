@@ -1,0 +1,16 @@
+@media (max-width: 640px) {
+
+      /* Desktop menu */
+    .desktop-menu {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+        section {
+            padding: 16px;
+        }
+
+}

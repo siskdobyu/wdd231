@@ -1,0 +1,26 @@
+[
+    {
+        "name": "In Touch: Crisis Line",
+        "phone": "+632 8893 7603",
+        "link": "https://www.in-touch.org/",
+        "image": "finalproject/images/intouch_logo.png"
+    },
+    {
+        "name": "HOPELINE",
+        "phone": "+632 8804 4673",
+        "link": "https://www.facebook.com/HopelinePH/",
+        "image": "finalproject/images/hopeline_logo.jpg"
+    },
+    {
+        "name": "Tawag Paglaum - Centro Bisaya",
+        "phone": "+63 966 467 9626",
+        "link": "https://www.facebook.com/profile.php?id=100068862624004",
+        "image": "finalproject/images/tawag_paglaum_logo.png"
+    },
+    {
+        "name": "National Center for Mental Health Crisis Hotline",
+        "phone": "1800 1888 1553",
+        "link": "https://www.facebook.com/ncmhcrisishotline?mibextid=LQQJ4d",
+        "image": "finalproject/images/NCMH_logo.jpg"
+    }
+]

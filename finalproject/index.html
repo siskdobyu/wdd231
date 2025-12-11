@@ -11,14 +11,19 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
     <!--Style sheets-->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
 
-    <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/course.js" defer></script>
-    <script src="scripts/date.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+    
 </head>
 
 <body>
@@ -41,29 +46,31 @@
                 <li><a href="mentalhealth-basics.html">Mental Health Basics</a></li>
                 <li><a href="resources.html">Resources</a></li>
             </ul>
-        </nav>
-
-    
+        </nav>    
     </header>
 <main>
     <section class="hero">
         <img src="images/mindsurroundedbutterflies.jpg" alt="mental health matters">
         <div class="hero-text">
             <h2>Helping Filipinos Find Free and Low-Cost Mental Health Resources</h2>
-            <h3>Advocating
-                . Guiding. Empowering.</h3>
-            <a class="cta-btn" href="resources.html">Get Help</a>
+            <h3>Advocating. Guiding. Empowering.</h3>
+            <a class="cta-btn" href="resources.html">Explore Resources</a>
         </div>
         </section>
-
     <section>
-        <h2>MindCare PH</h2>
-        <p>What is mental health?</p>
+        <h2 id="needhelp">Need help now?</h2>
+        <p>If someone is in <span class=urgent>immediate</span> danger, you may call these free, 24/7 hotlines:</p>
+    </section>
+    <section id="directory" class="grid">        
+        <!-- <p><strong>National Center for Mental Health Crisis Hotline</strong> — <a href="tel:180018881553">(1800) 1888-1553</a></p>
+        <p><strong>Tawag Paglaum - Centro Bisaya</strong> — <a href="tel:+639664679626">(+63) 966-467-9626</a></p>
+        <p><strong>Hopeline Philippines</strong> — <a href="tel:+63288044673">(+632) 8804-4673</a></p>
+        <p><strong>In Touch: Crisis Line</strong> — <a href="tel:+63288937603">(+632) 8893-7603</a></p> -->
     </section>
     <section>
-        <h2>Site Purpose</h2>
-        <p>• The site will serve as a central hub to help Filipinos find <span class="accent">free or low-cost mental health institutions</span>, consultations with licensed professionals, trusted medicine sources, and suicide
-        prevention hotlines. It will also provide short educational descriptions of common mental health issues.</p>
+        <h2>Our Purpose</h2>
+        <p>A lot of Filipinos need to find <span class="accent">free or low-cost</span> mental health institutions, consultations with licensed professionals, trusted medicine sources, and suicide
+        prevention hotlines. We also need to information or more understanding about the mental health basics. We need to break the stigma regarding mental health in the Philippines.</p>
     </section>
     <section>
         <h2>Scenarios</h2>
@@ -74,7 +81,7 @@
     </section>
 </main>
 <footer>
-    <p>&copy;<span id="currentyear"></span> MindCare PH - Helping you find support that matters.</p>
+    <p>&copy;<span id="currentyear"></span> MindCare PH | Helping you find support that matters.</p>
     <p>Last Update: <span id="lastModified"></span></p>
 </footer>
 </body>

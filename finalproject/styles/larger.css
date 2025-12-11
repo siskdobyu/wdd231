@@ -1,0 +1,13 @@
+@media (min-width: 641px) {
+
+      /* Desktop menu */
+    .desktop-menu {
+        display: flex;
+    }
+
+    /* Hide mobile menu on desktop */
+    .mobile-menu {
+        display: none;
+    }
+
+}
