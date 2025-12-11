@@ -1,16 +1,22 @@
-@media (max-width: 640px) {
+@media (max-width: 768px) {
 
       /* Desktop menu */
     .desktop-menu {
         display: none;
     }
 
+    /* Shows the hamburger icon/menu button */
+    .menu-button {
+        display: block;
+        /* or inline-block */
+    }
+
     .mobile-menu {
         display: block;
     }
 
-        section {
+        /* section {
             padding: 16px;
-        }
+        } */
 
 }
