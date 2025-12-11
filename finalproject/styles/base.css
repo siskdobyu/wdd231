@@ -217,9 +217,9 @@
  }
 
  .card img {
-     width: 100%;
-     border-radius: 6px;
-     margin-bottom: 10px;
+     width: 25%;
+     border-radius: .375rem;
+     margin-bottom: .625rem;
      display: block;
      margin: 0 auto;
  }
