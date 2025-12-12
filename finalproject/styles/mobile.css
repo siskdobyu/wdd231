@@ -1,4 +1,4 @@
-@media (max-width: 768px) {
+@media (min-width: 320px) {
 
       /* Desktop menu */
     .desktop-menu {
@@ -18,5 +18,8 @@
         /* section {
             padding: 16px;
         } */
+body {
+    min-width: 320px;
+}
 
 }
