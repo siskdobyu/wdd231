@@ -64,13 +64,62 @@ function displayMembers(members) {
 // MODAL HANDLING
 // ---------------------
 function initModals() {
-    
+    // 1. Get all elements needed
+    const modalLinks = document.querySelectorAll('.open-modal');
+    const modals = document.querySelectorAll('.modal');
+
+    // OPEN MODAL: Attach listeners to the "Key Symptoms" links
+    modalLinks.forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            const modalId = link.getAttribute('data-target');
+            const modal = document.getElementById(modalId);
+            if (modal) openModal(modal);
+        });
+    });
+
+    // CLOSE MODAL: Attach listeners to close buttons and outside clicks
+    modals.forEach(modal => {
+        const closeBtn = modal.querySelector('.close-modal');
+        // Close via 'X' button
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => closeModal(modal));
+        }
+        // Close via outside click
+        modal.addEventListener('click', e => {
+            if (e.target === modal) closeModal(modal);
+        });
+    });
+
+    // ESC key closes any open modal
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') {
+            modals.forEach(modal => {
+                // Check if the modal is currently visible
+                if (modal.dataset.visible === "true") closeModal(modal);
+            });
+        }
+    });
 }
+
 function openModal(modal) {
-
+    // Set a data attribute for tracking open state (used by ESC key logic)
+    modal.dataset.visible = "true";
+    // Change CSS display property from 'none' to 'flex' (as defined in your CSS)
+    modal.style.display = "flex";
+    // Set accessibility attributes
+    modal.setAttribute("aria-hidden", "false");
+    // Move focus to the modal for accessibility (optional, but good practice)
+    modal.focus();
 }
-function closeModal(modal) {
 
+function closeModal(modal) {
+    // Reset data attribute
+    modal.dataset.visible = "false";
+    // Hide the modal
+    modal.style.display = "none";
+    // Reset accessibility attributes
+    modal.setAttribute("aria-hidden", "true");
 }
 
 
