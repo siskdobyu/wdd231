@@ -50,10 +50,9 @@ function displayMembers(members) {
         card.innerHTML = `
             <img src="images/${member.image}" alt="${member.name} logo" loading="lazy">
             <h3>${member.name}</h3>
-            <p><strong>Service:</strong> ${member.service || 'N/A'}</p>
             <p><strong>Contact:</strong> <a href="tel:${member.phone}">${member.phone}</a></p>
             <p><strong>Operating Hours:</strong> ${member.hours || '24/7'}</p>
-            ${member.link ? `<p><a href="${member.link}" target="_blank">Visit Website</a></p>` : ''}
+            ${member.link ? `<p><a href="${member.link}" target="_blank">${member.link}</a></p>` : ''}
         `;
         directory.appendChild(card);
     });
