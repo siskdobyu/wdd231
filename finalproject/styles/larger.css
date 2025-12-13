@@ -12,7 +12,9 @@
 
     nav ul {
         display: flex;
-        justify-content: space-evenly;
+        flex-direction: row;
+        justify-content:space-evenly;
+        gap: 35rem;
     }
 
     /* Make the Medicine Access section two columns */

@@ -88,23 +88,24 @@
  } */
 
  nav ul {
-     list-style: none;
-     margin: 0;
-     padding: 0;
-
      display: flex;
-     width: 100%;
-     flex-wrap: wrap;
-     justify-content: center;
-     gap: 1.5rem;
+     /* width: 100%;
+     flex-wrap: wrap; */
+     justify-content:space-between;
+     align-items: center;
+     gap: 5rem;
 
-     /* align-items: center; */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+     
  }
 
  nav li a {
      color: white;
      display: block;
-     padding: 0.5rem;
+     padding: 1.55rem 2.5rem;
  }
 
  nav a.active {
@@ -368,12 +369,11 @@
  /* The main container for the cards */
  .institution-listing,
  .hotline-cards {
-     /* Uses CSS Grid for a clean, responsive card layout */
+    
      display: grid;
-     /* Creates columns that are a minimum of 300px wide, max 1fr */
+    
      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-     gap: 1.5rem;
-     /* Space between cards */
+     gap: 1.5rem; /* Space between cards */
      margin: 20px 0;
  }
 
