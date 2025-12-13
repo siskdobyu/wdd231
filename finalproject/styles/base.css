@@ -28,12 +28,12 @@
      color: var(--text);
      margin: 0;
      padding: 0;
-    /* overflow-x: hidden; */
+     overflow-x: hidden;
  }
 
  header {
      background-color: var(--primary);
-     padding: 15px;
+     padding: 10px 15px;
      text-align: center;
      font-weight: 600;
      color: white;
@@ -44,6 +44,27 @@
     align-items: center;
  }
 
+ .header-container {
+     width: 100%;
+     max-width: 1200px; /* layout max width is */
+     margin: 0 auto;
+     padding: 0 20px;   /* prevents content touching edges */
+     display: flex;
+     flex-direction: column;   /* stack for mobile */
+     align-items: center;
+     justify-content: space-between;
+ }
+
+ @media (min-width: 768px) {
+     .header-container {
+         flex-direction: row;         /* horizontal on larger screens */
+         align-items: center;
+     }
+
+     h1 {
+         margin: 0;        /* remove extra spacing */
+     }
+ }
  section {
      padding: 20px;
      border-bottom: 1px solid #ddd;
@@ -89,8 +110,7 @@
 
  nav ul {
      display: flex;
-     /* width: 100%;
-     flex-wrap: wrap; */
+     max-width: 100%;
      justify-content:space-between;
      align-items: center;
      gap: 5rem;
@@ -131,15 +151,22 @@
 
  /* Mobile menu list (vertical) */
  .mobile-menu ul {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
      list-style: none;
      padding: 0;
      margin: 0;
      background-color: var(--primary);
  }
 
+ .mobile-menu ul li a {
+     padding: 0.75rem 1rem;  /* smaller padding for mobile */
+ }
+
  .mobile-menu li a {
      display: block;
-     padding: 0.75rem;
+     padding: 0.75rem 1rem;
      color: white;
      text-align: center;
  }

@@ -13,8 +13,12 @@
     nav ul {
         display: flex;
         flex-direction: row;
-        justify-content:space-evenly;
-        gap: 35rem;
+        justify-content:flex-end;
+        gap: 2rem;
+    }
+
+    nav li a {
+        padding: 1rem 1.5rem;        /* smaller, consistent */
     }
 
     /* Make the Medicine Access section two columns */
