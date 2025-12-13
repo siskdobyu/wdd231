@@ -1,13 +1,18 @@
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
 
       /* Desktop menu */
     .desktop-menu {
-        display: flex;
+        display: block;
     }
 
     /* Hide mobile menu on desktop */
     .mobile-menu {
         display: none;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-evenly;
     }
 
     /* Make the Medicine Access section two columns */
@@ -19,6 +24,8 @@
     .resource-card {
         padding: 25px;
     }
+
+    
     
 
 }

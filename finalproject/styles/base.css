@@ -19,7 +19,7 @@
  * {
     box-sizing: border-box;
     max-width: 100%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
  }
 
  body {
@@ -28,7 +28,7 @@
      color: var(--text);
      margin: 0;
      padding: 0;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
  }
 
  header {
@@ -38,6 +38,10 @@
      font-weight: 600;
      color: white;
      font-size: 22px;
+
+    display: flex;
+    flex-direction: column; /*stack items vertically */
+    align-items: center;
  }
 
  section {
@@ -76,16 +80,25 @@
      font-size: 16px;
  }
 
- /* === Navigation === */
+ /* === Navigation- mobile first=== */
+ /* header {
+     display: flex;
+     justify-content: space-between;
+     /* align-items: center; 
+ } */
+
  nav ul {
      list-style: none;
      margin: 0;
      padding: 0;
+
      display: flex;
      width: 100%;
      flex-wrap: wrap;
-     justify-content: space-evenly;
-     align-items: center;
+     justify-content: center;
+     gap: 1.5rem;
+
+     /* align-items: center; */
  }
 
  nav li a {
@@ -98,15 +111,13 @@
      font-weight: bold;
      border-bottom: 2px solid #fff;
  }
- /* Desktop menu visible by default */
+
  .desktop-menu {
-    display: flex;
-    justify-content: space-evenly
+     display: none;
  }
 
- /* Mobile menu hidden by default */
  .mobile-menu {
-     display: none;
+     display: block;
  }
 
  #menuBtn {
@@ -115,6 +126,21 @@
      color: white;
      font-size: 2rem;
      cursor: pointer;
+ }
+
+ /* Mobile menu list (vertical) */
+ .mobile-menu ul {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+     background-color: var(--primary);
+ }
+
+ .mobile-menu li a {
+     display: block;
+     padding: 0.75rem;
+     color: white;
+     text-align: center;
  }
 
  /* Hide mobile menu links initially */
@@ -127,7 +153,7 @@
      position: relative;
      width: 100%;
      height: 500px;
-     overflow: hidden;
+     /* overflow: hidden; */
  }
 
  .hero img {
@@ -330,7 +356,7 @@
     padding-top: 0;
     margin-top: 0;
     border-top: 0.1px solid transparent;
-    overflow: hidden;
+    /* overflow: hidden; */
  }
 
  .container h1 {
