@@ -46,7 +46,7 @@
 
  .header-container {
      width: 100%;
-     max-width: 1200px; /* layout max width is */
+     max-width: 767px; /* layout max width is */
      margin: 0 auto;
      padding: 0 20px;   /* prevents content touching edges */
      display: flex;
